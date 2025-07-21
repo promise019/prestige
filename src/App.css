@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+.registration-navigation{
+    @apply p-2 font-bold text-white
+}
+
+::placeholder{
+    @apply text-gray-100
+}
