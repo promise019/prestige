@@ -10,7 +10,7 @@ export default function PaystackButton({
 
   const payWithPaystack = () => {
     const handler = window.PaystackPop.setup({
-      key: "pk_live_5d263b32c967270d5457d89ee8ef5dcd8dbe6f71",
+      key: "pk_live_a1e489940797d2761e74b94c119cbd5bee69e1d1",
       email: email,
       amount: code ? 5000 * 100 : 6000 * 100,
       currency: "NGN",
