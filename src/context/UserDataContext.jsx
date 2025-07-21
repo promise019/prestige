@@ -35,7 +35,7 @@ export default function UserDataProvider({ children }) {
           if (docsnap.exists()) {
             const userData = docsnap.data();
             setReferralData({
-              link: `kinnex-rho.vercel.app/registration/signup?ref=${userData.ReferralCode}`,
+              link: `prestige2earn.web.app/registration/signup?ref=${userData.ReferralCode}`,
               points: userData.referralCount,
               email: userData.Email,
             });
