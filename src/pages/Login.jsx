@@ -41,7 +41,7 @@ export default function Login() {
         localStorage.setItem("Prestige-login", user.uid);
 
         console.log(user.uid);
-        navigate("/home/deposit");
+        navigate("/home/dashboard");
         toast.success("login successfull");
       })
       .catch((error) => {

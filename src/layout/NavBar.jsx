@@ -27,7 +27,7 @@ export default function NavBar() {
           <img src={dashboard} className='w-7 md:inline-block' />
           <span className='hidden md:flex'>Dashboard</span>
         </NavLink>
-
+{/* 
         <NavLink
           to='deposit'
           className={({ isActive }) =>
@@ -40,7 +40,7 @@ export default function NavBar() {
         >
           <img src={deposit} className='w-7 md:inline' />
           <span className='hidden md:inline-block'>Deposit</span>
-        </NavLink>
+        </NavLink> */}
 
         <NavLink
           to='withdraw'

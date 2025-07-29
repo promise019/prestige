@@ -1,37 +1,21 @@
-import Header from "../layout/Header";
 import InputComponent from "../Component/InputComponent";
 import I from "../assets/icon/Frame (12) (1).svg";
-import ButtonComponent from "../Component/ButtonComponent";
-import bank from "../assets/icon/Bank.svg";
+import close from '../assets/icon/Close.svg'
 import paystack from "../assets/icon/Paystack.svg";
-import crypto from "../assets/icon/Frame (15) (1).svg";
 import { useContext, useEffect, useRef, useState } from "react";
 import PaystackButton from "../Component/PaystackButton";
 import { ToastContainer, toast } from "react-toastify";
-import { userDataContext } from "../context/UserDataContext";
+import { signup_dataContext } from "../context/UserSignUpContext";
+const plans = [{ plan: 2, amount: 6000, returns: 1200, roi: 20 }];
 
-const plans = [
-  // { plan: 1, amount: 3000, returns: 600, roi: 20 },
-  { plan: 2, amount: 6000, returns: 1200, roi: 20 },
-  // { plan: 3, amount: 10000, returns: 2000, roi: 20 },
-  // { plan: 4, amount: 15000, returns: 3000, roi: 20 },
-  // { plan: 5, amount: 25000, returns: 5000, roi: 20 },
-  // { plan: 6, amount: 50000, returns: 10000, roi: 20 },
-  // { plan: 7, amount: 100000, returns: 20000, roi: 20 },
-  // { plan: 8, amount: 200000, returns: 40000, roi: 20 },
-  // { plan: 9, amount: 400000, returns: 80000, roi: 20 },
-  // { plan: 10, amount: 600000, returns: 120000, roi: 20 },
-  // { plan: 11, amount: 1000000, returns: 200000, roi: 20 },
-];
-
-export default function Deposit() {
+export default function Deposit({ deposit, onClick, submitTransaction }) {
   const [bookingCode, setBookngCode] = useState();
   const [amountError, setAmountError] = useState("");
   const inputRef = useRef(null);
-  const { referralData } = useContext(userDataContext);
+  const { userData } = useContext(signup_dataContext);
 
   function checkAmount() {
-    if (bookingCode !== 'Gh-gyyyuygfsrrsde45444wgb9') {
+    if (bookingCode !== "Gh-gyyyuygfsrrsde45444wgb9") {
       setAmountError("Incorrect Booking Code");
     } else {
       setAmountError("");
@@ -43,17 +27,30 @@ export default function Deposit() {
   }, [bookingCode]);
 
   return (
-    <div className="bg-gray-100 p-3 min-h-screen z-4 md:w-[70%] lg:w-[75%]">
+    <div
+      className={`${
+        deposit ? "block" : "hidden"
+      } bg-gray-100 p-3 fixed left-0 top-2 min-h-screen z-4 md:px-9 lg:px-20 xl:px-70 2xl:px-65`}
+    >
       <ToastContainer />
-      <Header Page={"Deposit Funds"} />
-      <p className="mt-12 mb-3">Add funds to your account</p>
+
+      <header className="fixed top-0 left-0 bg-white p-3 flex w-screen justify-between">
+        <h1 className="font-bold text-xl">Secure Slot</h1> 
+        <img src={close} className="w-7 h-7 p-1 rounded-full border" onClick={onClick} />
+      </header>
+
+      <p className="mt-12 mb-3">
+        <section className="w-5 h-5 rounded-full bg-green-700 shadow inline-block mr-2"></section>
+        Pay &#8358;6,000 to get started with Prestige
+      </p>
       <main className="bg-white p-4 rounded-lg space-y-5 md:w-full">
         <section className="space-x-2 space-y-2 md:p-2">
           <h1 className="font-bold">Select Payment Method</h1>
           <PaystackButton
             bookingCode={bookingCode}
-            email={referralData.email}
+            email={userData.email}
             className="p-3 rounded-lg space-x-1 bg-gray-50"
+            onSuccess={submitTransaction}
           >
             <img src={paystack} className="w-5 inline-block" />
             <span> Paystack</span>
@@ -90,7 +87,7 @@ export default function Deposit() {
             type={"text"}
             onChange={(e) => setBookngCode(e.target.value)}
             className={`w-full p-3 rounded-lg bg-gray-100 ${
-             bookingCode !== 'Gh-gyyyuygfsrrsde45444wgb9'
+              bookingCode !== "Gh-gyyyuygfsrrsde45444wgb9"
                 ? "text-red-700 border border-red-700 hover:border-red-700"
                 : ""
             }`}

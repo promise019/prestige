@@ -12,7 +12,6 @@ import Invite from "./layout/Invite";
 import Checkin from "./layout/Checkins";
 import Settings from "./layout/Settings";
 
-
 export default function App() {
   return (
     <div className="h-full">
@@ -22,14 +21,12 @@ export default function App() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
         </Route>
-
-        <Route path='/home' element={<Mainpage />}>
-          <Route path='dashboard' element={<Dashboard />} />
-          <Route path='deposit' element={<Deposit />} />
-          <Route path='withdraw' element={<Withdraw />} />
-          <Route path='invite' element={<Invite />} />
-          <Route path='check-in' element={<Checkin />} />
-          <Route path='settings' element={<Settings />} />
+        <Route path="/home" element={<Mainpage />}>
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="withdraw" element={<Withdraw />} />
+          <Route path="invite" element={<Invite />} />
+          <Route path="check-in" element={<Checkin />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>
     </div>

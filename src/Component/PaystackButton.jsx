@@ -14,7 +14,12 @@ export default function PaystackButton({
       email: email,
       amount: code ? 5000 * 100 : 6000 * 100,
       currency: "NGN",
-      callBack: onSuccess,
+      callback: function (response) {
+        console.log("✅ Paystack callback received:", response);
+        if (typeof onSuccess === "function") {
+          onSuccess(response);
+        }
+      },
       onClose,
     });
 

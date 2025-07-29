@@ -11,6 +11,6 @@ export function LoadingIndicator1({ className }) {
 
 export function InteractionBlocker({ children }) {
   return (
-    <div className='bg-transparent w-screen h-screen fixed top-0 left-0'>{children}</div>
+    <div className='bg-transparent z-5 w-screen h-screen fixed top-0 left-0'>{children}</div>
   );
 }
