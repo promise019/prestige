@@ -10,7 +10,7 @@ import ButtonComponent from "../Component/ButtonComponent";
 
 export default function NavBar() {
   return (
-    <nav className='bg-[#157232] text-white p-3  fixed bottom-0 z-3 left-0 w-screen md:static md:w-[30%] md:h-screen lg:w-[25%]'>
+    <nav className='bg-[#157232] text-white py-3 px-5 md:p-3  fixed bottom-0 z-3 left-0 w-screen md:static md:w-[30%] md:h-screen lg:w-[25%]'>
       <h1 className='hidden md:block font-bold text-2xl mb-10 '>Prestige Earn</h1>
       {/* <br className='hidden md:block' /> */}
       <section className='flex justify-between w-screen md:h-fit md:grid md:space-y-4 '>

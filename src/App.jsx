@@ -6,7 +6,6 @@ import Login from "./pages/Login";
 import LandingPage from "./pages/LandingPage";
 import Mainpage from "./pages/Mainpage";
 import Dashboard from "./layout/Dashboard";
-import Deposit from "./layout/Deposit";
 import Withdraw from "./layout/Withdraw";
 import Invite from "./layout/Invite";
 import Checkin from "./layout/Checkins";

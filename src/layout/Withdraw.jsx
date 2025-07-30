@@ -1,4 +1,5 @@
 import Header from "../layout/Header";
+import ComingSoon from "../Component/comingSoon";
 import I from "../assets/icon/Frame (12) (1).svg";
 import bank from "../assets/icon/Bank.svg";
 import paystack from "../assets/icon/Paystack.svg";
@@ -14,10 +15,10 @@ export default function Withdraw() {
   return (
     <div className='bg-gray-100 p-3 min-h-screen z-4 md:w-[70%] lg:w-[75%]'>
       <Header Page={"Withdraw Funds"} />
-      <p className='mt-12 mb-3'>Withdraw funds from your investment account</p>
+      {/* <p className='mt-12 mb-3'>Withdraw funds from your investment account</p> */}
 
-      <section className="mt-15 ">
-        <h1 className="font-bold text-2xl">Coming Soon</h1>
+      <section className="mt-15 flex justify-center">
+       <ComingSoon/>
       </section>
       {/* <main className='bg-white p-4 rounded-lg space-y-7 md:w-full'>
         <br />
