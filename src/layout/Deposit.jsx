@@ -80,7 +80,7 @@ export default function Deposit({ deposit, onClick, submitTransaction }) {
             placeholder='&#8358; 5,000.00'
           /> */}
 
-          <h1>Booking Code</h1>
+          <h1>Coupon Code</h1>
           <InputComponent
             ref={inputRef}
             value={bookingCode}
