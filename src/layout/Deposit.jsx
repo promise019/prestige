@@ -30,7 +30,7 @@ export default function Deposit({ deposit, onClick, submitTransaction }) {
     <div
       className={`${
         deposit ? "block" : "hidden"
-      } bg-gray-100 p-3 fixed left-0 top-2 min-h-screen z-4 md:px-9 lg:px-20 xl:px-70 2xl:px-65`}
+      } bg-gray-100 p-3 fixed left-0 top-2 w-screen min-h-screen z-4 md:px-9 lg:px-20 xl:px-70 2xl:px-65`}
     >
       <ToastContainer />
 
