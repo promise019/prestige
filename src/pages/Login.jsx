@@ -112,6 +112,13 @@ export default function Login() {
       >
         Login
       </ButtonComponent>
+
+      <ButtonComponent
+        className="w-full text-white font-bold p-3 rounded-lg"
+        onClick={(e) => (e.preventDefault(), navigate("/registration/resetpassword"))}
+      >
+        Forgotten Password
+      </ButtonComponent>
     </form>
   );
 }

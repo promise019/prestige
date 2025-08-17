@@ -190,10 +190,10 @@ export default function Signup() {
         )}
 
         <h1 className="text-2xl font-bold font-serif text-white">
-          Create Account &#128079;
+          Welcome To Prestige &#128079;
         </h1>
 
-        <p className="text-white">Please create account to continue</p>
+        <p className="text-white">Please create an account to continue</p>
 
         <section className="grid grid-cols-2 space-x-3">
           <InputComponent

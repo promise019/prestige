@@ -10,6 +10,7 @@ import Withdraw from "./layout/Withdraw";
 import Invite from "./layout/Invite";
 import Checkin from "./layout/Checkins";
 import Settings from "./layout/Settings";
+import ResetPassword from "./layout/ForgottenPassword";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route index element={<LandingPage />} />
         <Route path="/registration" element={<Registraion />}>
           <Route path="login" element={<Login />} />
+          <Route path="resetpassword" element={<ResetPassword/>}/>
           <Route path="signup" element={<Signup />} />
         </Route>
         <Route path="/home" element={<Mainpage />}>
