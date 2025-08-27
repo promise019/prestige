@@ -41,7 +41,7 @@ export default function Deposit({ deposit, onClick, submitTransaction }) {
 
       <p className="mt-12 mb-3">
         <section className="w-5 h-5 rounded-full bg-green-700 shadow inline-block mr-2"></section>
-        Pay &#8358;6,000 to get started with Prestige
+        Pay &#8358;4,000 to get started with Prestige
       </p>
       <main className="bg-white p-4 rounded-lg space-y-5 md:w-full">
         <section className="space-x-2 space-y-2 md:p-2">
@@ -110,9 +110,9 @@ export default function Deposit({ deposit, onClick, submitTransaction }) {
         <section className="flex space-x-2 bg-gray-100 p-2 rounded-lg ">
           <img src={I} className="w-6" />
           <p className="text-blue-800">
-            Payment with booking code &#8358;5,000
+            Payment with booking code &#8358;3,000
             <br />
-            Payment without booking code &#8358;6,000
+            Payment without booking code &#8358;4,000
           </p>
         </section>
       </main>
